@@ -1,6 +1,6 @@
 const fetcData = require('../utils/fetchData');
 
-const API = 'https://ricandmortiapi.com/api/character';
+const API = 'https://rickandmortyapi.com/api/character/';
 
 fetcData(API)
 .then(data => {
@@ -8,7 +8,7 @@ fetcData(API)
     return fetcData(`${API}${data.results[0].id}`)
 })
 .then(data=>{
-    console.log(dat.name)
+    console.log(data.name)
     return fetcData(data.origin.url)
 
 })
